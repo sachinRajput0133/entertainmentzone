@@ -16,7 +16,7 @@
  color: rgb(255, 255, 255);
  font-weight: 200;
  z-index: 100 !important;
- border-bottom:  2px solid rgb(40, 36, 36);
+ /* border-bottom:  2px solid rgb(40, 36, 36); */
  position: fixed;
 
 }
