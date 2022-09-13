@@ -28,7 +28,7 @@ const fetchMovies= async()=>{
 
 useEffect(()=>{
  fetchMovies()
- 
+ // eslint-disable-next-line
 },[page ,genreForURL])
 
 
