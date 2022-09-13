@@ -8,7 +8,7 @@ import './Trending.css'
 const Trending = () => {
 
 const [content,setContent]=useState([])
-const[page,setPage]=useState(2)
+const[page,setPage]=useState(1)
   
 
 const fetchTrending= async()=>{

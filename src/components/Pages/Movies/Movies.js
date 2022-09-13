@@ -18,7 +18,8 @@ const [totalPages,setTotalPages]=useState()
 const genreForURL=useGenres(selectedGenres)
 const fetchMovies= async()=>{
   console.log(genreForURL)
-   const {data} = await axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=668395355cfd28aa28566f4ca964d861&page=${page}&with_genres=${genreForURL}`)
+   const {data} = await axios.get(
+    `https://api.themoviedb.org/3/discover/movie?api_key=668395355cfd28aa28566f4ca964d861&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreForURL}`)
    console.log(data.results)
    setContent(data.results)
     setTotalPages(data.total_pages)

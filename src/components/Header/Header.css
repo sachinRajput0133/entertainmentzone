@@ -11,6 +11,7 @@
  /* padding-bottom: 1em; */
  font-family: 'Montserrat', sans-serif;
  padding-bottom: 0.1em;
+
  font-size: 5vw; 
  box-shadow: 0 1px 50px rgb(0, 0, 0) !important;
  color: rgb(255, 255, 255);
@@ -22,7 +23,7 @@
 }
 @media (max-width:1000px){
     .header{
-        padding: .4em 0;
+        padding: .5em 0;
 
     }
 }
