@@ -1,0 +1,28 @@
+
+.header{
+ width: 100%;
+ background-color:rgb(67 84 116);
+ /* border: 2px solid red; */
+ /* box-sizing: border-box; */
+ cursor: pointer;
+ display: flex;
+ justify-content: center;
+ text-transform: uppercase;
+ /* padding-bottom: 1em; */
+ font-family: 'Montserrat', sans-serif;
+ padding-bottom: 0.1em;
+ font-size: 5vw; 
+ box-shadow: 0 1px 50px rgb(0, 0, 0) !important;
+ color: rgb(255, 255, 255);
+ font-weight: 200;
+ z-index: 100 !important;
+ border-bottom:  2px solid rgb(40, 36, 36);
+ position: fixed;
+
+}
+@media (max-width:1000px){
+    .header{
+        padding: .4em 0;
+
+    }
+}
