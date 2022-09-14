@@ -44,14 +44,29 @@
     font-weight: 100;
     font-size: 90%;
 }
-@media (max-width:500px){
- .trending-card{
-    width: 46%;
-
- }
-}
 @media (max-width:450px) {
     .trending-card{
-width: 80vw;
+max-width: 73vw;
+
+
     }
+    .poster{
+      
+        max-width: 350vw;
+    }
+}
+@media (max-width:900px) and (minwidth:950px){
+
+.trending-card{
+    max-width:10vw ;
+}
+    
+}
+
+@media (max-width:451px)and (min-width:600px){
+ .trending-card{
+    width: 60vw;
+    /* height: 60vw; */
+
+ }
 }

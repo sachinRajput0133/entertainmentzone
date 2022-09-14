@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import { useEffect } from 'react';
+import { useEffect ,useState} from 'react';
 
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 // import { makeStyles ,useStyles} from '@mui/material';
@@ -16,7 +16,7 @@ import {useNavigate } from 'react-router-dom'
 export default function SimpleBottomNavigation() {
 // useStyles();
 const navigate=useNavigate()
-const [value, setValue] = React.useState(0);
+const [value, setValue] = useState(0);
 useEffect(()=>{
 if(value===0){
     navigate('/')

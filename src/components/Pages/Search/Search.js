@@ -1,10 +1,11 @@
-import { Button, Tab, Tabs, TextField} from '@mui/material'
+import { Button, Tab, Tabs, TextField ,ThemeProvider ,createTheme} from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
 
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import SingleContent from '../../SingleContent/SingleContent';
 import CustomPagination from '../../Pagination/CustomPagination';
+
 
 
 const Search = () => {
@@ -14,14 +15,15 @@ const [page,setPage]=useState(1)
 const [searchText,setSearchText]=useState('')
 const [content,setContent]=useState([])
 const [totalPages,setTotalPages]=useState()
-// const darkTheme=createTheme({
-//   palette:{
-//     type:'dark',
-//     primary:{
-//       main:'#fff'
-//     },
-//   },
-// });
+
+const darkTheme = createTheme({
+  palette: {
+    type: "dark",
+    primary: {
+      main: "#fff",
+    },
+  },
+});
 const fetchSearch=async ()=>{
       const {data} = await axios.get(`https://api.themoviedb.org/3/search/${type?"tv":"movie"}?api_key=668395355cfd28aa28566f4ca964d861&language=en-US&query=${searchText}&page=${page}&include_adult=false`
      )  
@@ -36,32 +38,34 @@ console.log(content)
 useEffect(()=>{
   window.scroll(0,0);
      fetchSearch()
-   // eslint-disable-next-line  
+  //  eslint-disable-next-line  
 },[type,page])
   return (
     <div>  
       
         
         
+<ThemeProvider theme={darkTheme}>
 <div style={{display:'flex',justifyContent:'center',padding:'1vw 0',margin:'auto' }}>
-    <TextField  className='searchBox'    label='Search' variant='filled' style={{flex:1}} onChange={(e)=>setSearchText(e.target.value)} />
+    <TextField  className='searchBox'    label='Search' variant='filled' style={{flex:1 }} onChange={(e)=>setSearchText(e.target.value)} />
 
-<Button  varient='contained' style={{marginLeft:'4px', background:'white' }}  onClick={fetchSearch} > 
+<Button  varient='contained' style={{marginLeft:'4px'}}  onClick={fetchSearch} > 
 <SearchIcon   />
 
  </Button>
 
 </div>
-        
-     <Tabs value={type} indicatorColor='primary'textColor='primary' 
+
+     <Tabs value={type}  main="#fff"  textColor='primary' 
      onChange={(e,newValue)=>{
       setType(newValue);
       setPage(1)
      }} >
-      <Tab  style={{width:'50%',color:'white'}}    label= "search Movies"  />
+      <Tab  style={{width:'50%',color:'white' }}    label= "search Movies"  />
       <Tab  style={{width:'50%',color:'white'}}    label= "Search TV Series"/>
       
-      </Tabs>     
+      </Tabs> 
+      </ThemeProvider>    
       <div>
       <span className="pageTitle"> </span>
       <div className="trending">

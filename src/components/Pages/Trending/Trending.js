@@ -27,7 +27,7 @@ useEffect(()=>{
 
 
   return (
-    <div>
+    <div className='trend'>
       <span className="pageTitle"> Trending</span>
       <div className="trending">
            {
