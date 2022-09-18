@@ -6,7 +6,7 @@ const CustomPagination = ( {  setpage, totalPages=10}) => {
 
     const darkTheme=createTheme({
         palette:{
-            type:'dark',
+            mode:'dark',
         }
     })
 

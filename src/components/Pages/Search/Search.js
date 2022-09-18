@@ -1,10 +1,12 @@
 import { Button, Tab, Tabs, TextField ,ThemeProvider ,createTheme} from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
-
-import React, { useEffect, useState } from 'react'
+// import {debounce} from 'lodash'
+import React, {  useEffect, useState } from 'react'
 import axios from 'axios';
 import SingleContent from '../../SingleContent/SingleContent';
 import CustomPagination from '../../Pagination/CustomPagination';
+import './Search.css'
+// import useDebounce from '../../../Hooks/Debounse';
 
 
 
@@ -18,7 +20,7 @@ const [totalPages,setTotalPages]=useState()
 
 const darkTheme = createTheme({
   palette: {
-    type: "dark",
+    mode: "dark",
     primary: {
       main: "#fff",
     },
@@ -29,25 +31,43 @@ const fetchSearch=async ()=>{
      )  
      
 
-     
+     console.log(data)
+    
       setContent(data.results)
       setTotalPages(data.total_pages)
 }
-console.log(content)
+// console.log(content)
 
 useEffect(()=>{
+ let timeOut=  setTimeout(() => {
+  
   window.scroll(0,0);
+  
      fetchSearch()
+}, 500);
+return  ()=> clearTimeout(timeOut)
   //  eslint-disable-next-line  
-},[type,page])
+},[type,page,searchText])
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div>  
       
-        
+   
         
 <ThemeProvider theme={darkTheme}>
 <div style={{display:'flex',justifyContent:'center',padding:'1vw 0',margin:'auto' }}>
-    <TextField  className='searchBox'    label='Search' variant='filled' style={{flex:1 }} onChange={(e)=>setSearchText(e.target.value)} />
+    <TextField  className='searchBox'  InputProps={{className:'inputtext'}}   InputLabelProps={{className:'input-label'}}   label='Search' variant='filled' style={{flex:1 }} onChange={(e)=>setSearchText(e.target.value)} />
 
 <Button  varient='contained' style={{marginLeft:'4px'}}  onClick={fetchSearch} > 
 <SearchIcon   />

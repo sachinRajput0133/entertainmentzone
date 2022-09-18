@@ -4,13 +4,13 @@
   color: white;
   z-index: 1;
 }  */
+
 *{
   scroll-behavior: smooth;
 }
 
-
 .app{
-  background: rgb(67 84 116);
+  background:#131517;;
    
      min-height: 100vh;
      z-index: -1;
