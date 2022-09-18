@@ -66,7 +66,7 @@ return  ()=> clearTimeout(timeOut)
    
         
 <ThemeProvider theme={darkTheme}>
-<div style={{display:'flex',justifyContent:'center',padding:'1vw 0',margin:'auto' }}>
+<div className='search-bar' >
     <TextField  className='searchBox'  InputProps={{className:'inputtext'}}   InputLabelProps={{className:'input-label'}}   label='Search' variant='filled' style={{flex:1 }} onChange={(e)=>setSearchText(e.target.value)} />
 
 <Button  varient='contained' style={{marginLeft:'4px'}}  onClick={fetchSearch} > 

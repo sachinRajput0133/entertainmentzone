@@ -6,3 +6,33 @@
 .input-label{
     color:white !important;
 }
+/* .search-cont{
+    margin-top: 50rem;
+} */
+.search-bar{
+    display:flex;
+    justify-content: center;
+    padding: .1vw 0;
+    margin: auto;
+   /* border: 2px solid red; */
+
+}
+
+/* @media(max-width:500px) {
+    .search-cont{
+       padding: 10vw 0;
+       margin: auto;
+       border: 2px solid red;
+
+    }
+    
+} */
+
+@media (max-width:600px){
+    .search-bar{
+        padding: 8vw 0;
+        margin: auto;
+        /* border: 2px solid red; */
+ 
+     }
+}
