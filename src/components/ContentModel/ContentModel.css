@@ -33,8 +33,9 @@ padding: 2vw;
 .modal-description{
     padding: 3vw;
  border-radius: 2vw;
-    border: 1px solid black;
-    box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.262);
+ border: 1px solid #7c7878;
+ box-shadow: inset 0 5px 5px rgb(93 78 78 / 26%);
+
 }
 .content-modal-title{
 

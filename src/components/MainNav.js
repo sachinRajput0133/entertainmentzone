@@ -39,7 +39,7 @@ if(value===0){
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
-     style={{backgroundColor:'#2d313a',zIndex:100 ,boxShadow:'0px 5px 5px black' ,color:'white'}} >
+     style={{backgroundColor:'rgb(21 58 35 / 92%)',zIndex:100 ,boxShadow:'0px 5px 5px black' ,color:'white'}} >
         <BottomNavigationAction style={{color:'white'}} label="Trending" icon={<WhatshotIcon style={{color:'white'}}/>} />
         <BottomNavigationAction style={{color:'white'}} label="Movies" icon={<MovieIcon style={{color:'white'}}/>} />
         <BottomNavigationAction style={{color:'white'}} label="TV Series" icon={<TvIcon style={{color:'white'}} />} />

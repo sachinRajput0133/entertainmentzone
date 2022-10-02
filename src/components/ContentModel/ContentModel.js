@@ -18,7 +18,7 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: "90vw",
   height: "70vh",
-  background: "#39445a",
+  background: " rgba(21, 58, 35)",
   // borderRadius: "2px solid #282c34",
   color: "white",
   // border: "2px solid #000",

@@ -1,6 +1,7 @@
 
 import { Badge, createTheme, ThemeProvider } from '@mui/material'
-import { styled } from '@mui/system'
+
+// import { styled } from '@mui/system'
 
 import React from 'react'
 import ContentModal from '../ContentModel/ContentModel'
@@ -22,11 +23,12 @@ const SingleContent = ( { id, poster, title,date, media_type,vote_average}) => {
 
 
 
+
   return (
     <ContentModal media_type={media_type}  id={id}   >
       <ThemeProvider theme={darkTheme}>
        
-        <Badge badgeContent={vote_average.toFixed(1)}  color={vote_average>6 ? 'primary': 'secondary'} />
+        <Badge badgeContent={vote_average.toFixed(1)}  style={{zIndex:'0'}} color={vote_average>6 ? 'primary': 'secondary'} />
 
       </ThemeProvider>
        <img  className='poster'   src={poster?  poster : "https://www.movienewz.com/img/films/poster-holder.jpg" } alt={title} /> 

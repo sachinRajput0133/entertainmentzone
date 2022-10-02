@@ -14,7 +14,7 @@ const[page,setPage]=useState(1)
 const fetchTrending= async()=>{
 
    const {data} = await axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=668395355cfd28aa28566f4ca964d861&page=${page}`)
-   console.log(data.results)
+  //  console.log(data.results)
    setContent(data.results)
 
 }
@@ -32,6 +32,7 @@ useEffect(()=>{
       <div className="trending">
            {
             content && content.map((c)=>{
+              console.log(c)
             return  (
                <SingleContent key={c.id} poster={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${c.poster_path}`} id={c.id} title={c.title  ||c.name} date={c.first_air_date || c.release_date} media_type={c.media_type} vote_average={c.vote_average} />
                 )

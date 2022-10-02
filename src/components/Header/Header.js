@@ -4,7 +4,7 @@ import './Header.css'
 const Header = () => {
   return (
     
-       <div  onClick={()=>window.scroll(0,0)} className='header'> 🎬 Entertainment Zone 🎥 </div>
+       <div  onClick={()=>window.scroll(0,0)} className='header'>  Entertainment Zone  </div>
     
   )
 }

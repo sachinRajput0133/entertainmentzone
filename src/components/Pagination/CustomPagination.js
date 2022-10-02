@@ -21,7 +21,7 @@ const onChangeHanel=(e)=>{
   return (
     <div className='pagination'>
      <ThemeProvider theme={darkTheme}  >
-      <Pagination count={totalPages} onChange={onChangeHanel}  hideNextButton hidePrevButton color='primary' />
+      <Pagination count={totalPages} onChange={onChangeHanel}   hideNextButton hidePrevButton color='primary' />
            
      </ThemeProvider>
     </div>
