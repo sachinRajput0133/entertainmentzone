@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/entertainmentzone/static/css/main.e55578b6.css",
+    "main.js": "/entertainmentzone/static/js/main.01c1dd50.js",
+    "index.html": "/entertainmentzone/index.html",
+    "main.e55578b6.css.map": "/entertainmentzone/static/css/main.e55578b6.css.map",
+    "main.01c1dd50.js.map": "/entertainmentzone/static/js/main.01c1dd50.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e55578b6.css",
+    "static/js/main.01c1dd50.js"
+  ]
+}
