@@ -20,12 +20,17 @@ const [value, setValue] = useState(0);
 useEffect(()=>{
 if(value===0){
     navigate('/')
+    window.scroll(0,0)
+
 }else if(value===1){
-    navigate('/movies') 
+    navigate('/movies')
+    window.scroll(0,0) 
 }else if(value===2){
     navigate('/series')
+    window.scroll(0,0)
 }else if (value===3){
     navigate('/search')
+    window.scroll(0,0)
 }
 
 
